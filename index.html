@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Switch資産価値ナビ | Switch資産価値ナビ</title>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#1f2937; --sub:#667085; --line:#d8dee8; --green:#14745a; --orange:#c25b22; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    header { background:#101828; color:#fff; padding:26px 18px 22px; border-bottom:4px solid var(--green); }
+    .wrap { width:min(1240px, calc(100% - 28px)); margin:0 auto; }
+    h1 { margin:0 0 8px; font-size:clamp(28px,4vw,42px); line-height:1.15; letter-spacing:0; }
+    h2 { margin:0 0 10px; font-size:22px; letter-spacing:0; }
+    h3 { margin:0 0 6px; font-size:17px; letter-spacing:0; }
+    .lead { margin:0; color:#d0d5dd; max-width:900px; }
+    main { padding:20px 0 36px; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .site-nav a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.32); border-radius:6px; padding:6px 10px; font-size:13px; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .stat,.panel,.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; }
+    .stat span { display:block; color:var(--sub); font-size:12px; }
+    .stat strong { display:block; margin-top:3px; font-size:24px; line-height:1.2; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .article-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .article-body { max-width: 880px; }
+    .article-body p { margin: 0 0 14px; }
+    .article-body ul { margin: 0 0 16px 20px; padding: 0; }
+    .article-body li { margin-bottom: 6px; }
+    .grid a,.source a { color:var(--green); font-weight:700; text-decoration:none; }
+    .toolbar { display:grid; grid-template-columns:minmax(180px,1fr) auto; gap:12px; margin-bottom:14px; align-items:center; }
+    input { width:100%; min-height:42px; border:1px solid var(--line); border-radius:6px; padding:0 12px; font:inherit; background:#fff; }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    button { min-height:40px; border:1px solid var(--line); border-radius:6px; padding:0 12px; background:#fff; color:var(--ink); font:inherit; cursor:pointer; }
+    button.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .table-shell { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+    table { width:100%; min-width:1320px; border-collapse:collapse; }
+    th,td { padding:11px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:14px; }
+    th { background:#f2f4f7; color:#344054; font-size:12px; white-space:nowrap; }
+    .rank { width:48px; font-weight:700; color:var(--green); }
+    .title { min-width:230px; font-weight:700; }
+    .title span { display:block; color:var(--sub); font-size:12px; font-weight:500; }
+    .price { white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .drop { white-space:nowrap; font-weight:700; color:var(--orange); }
+    .index-cell { min-width:148px; }
+    .index-number { display:flex; justify-content:space-between; gap:8px; margin-bottom:5px; font-size:12px; }
+    .index-number strong { font-size:18px; line-height:1; }
+    .bar { height:8px; border-radius:999px; overflow:hidden; background:#e5e7eb; }
+    .bar span { display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--orange)); }
+    .badge { display:inline-block; border-radius:999px; padding:3px 9px; background:#eaf7f2; color:var(--green); font-size:12px; font-weight:700; white-space:nowrap; }
+    .badge.muted { background:#f2f4f7; color:#475467; }
+    .comment { min-width:310px; color:#344054; }
+    .source { min-width:120px; }
+    .cta-cell { min-width:150px; }
+    .cta-link { display:inline-block; border-radius:6px; padding:7px 10px; background:var(--green); color:#fff; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .cta-link.secondary { background:#344054; }
+    .note { color:var(--sub); font-size:13px; margin:14px 2px 0; }
+    footer { padding:20px 0 32px; color:var(--sub); font-size:13px; }
+    @media (max-width:780px) { .stats,.grid,.article-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .toolbar{grid-template-columns:1fr;} .filters{justify-content:flex-start;} button{flex:1 1 auto;} }
+    @media (max-width:520px) { .stats,.grid,.article-grid{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>Switch資産価値ナビ</h1><p class="lead">Switchパッケージ版中古ソフトの買い時・売り時・プレミア化候補を判断するサイトです。</p>
+    <nav class="site-nav" aria-label="主要ページ">
+      <a href="index.html">トップ</a>
+      <a href="pages/ranking.html">資産価値ランキング</a>
+      <a href="pages/buy-ranking.html">買い時</a>
+      <a href="pages/sell-ranking.html">売り時</a>
+      <a href="pages/premium-candidates.html">プレミア候補</a>
+      <a href="pages/disclaimer.html">免責</a>
+    </nav>
+    </div></header>
+  <main><div class="wrap">
+    <section class="stats" aria-label="集計">
+      <div class="stat"><span>掲載本数</span><strong>30</strong></div>
+      <div class="stat"><span>プレミア候補</span><strong>3</strong></div>
+      <div class="stat"><span>買い時候補</span><strong>17</strong></div>
+      <div class="stat"><span>価格未入力</span><strong>0</strong></div>
+    </section>
+    
+    <section class="grid" aria-label="主要ページ">
+      <div class="panel"><h2>資産価値ランキング</h2><p>中古価格と希少性から総合評価します。</p><a href="pages/ranking.html">ランキングを見る</a></div>
+      <div class="panel"><h2>買い時ランキング</h2><p>今買っても損しにくい候補を確認します。</p><a href="pages/buy-ranking.html">買い時を見る</a></div>
+      <div class="panel"><h2>売り時ランキング</h2><p>売却や保有判断に使うページです。</p><a href="pages/sell-ranking.html">売り時を見る</a></div>
+    </section>
+    <section>
+      <h2>読み物</h2>
+      <div class="article-grid">
+        <article class="card"><h3>値崩れしにくい中古ソフト</h3><p>中古価格が残りやすいSwitchソフトの特徴を整理します。</p><a href="pages/articles/value-retention.html">記事を読む</a></article>
+        <article class="card"><h3>中古購入で損しにくいソフト</h3><p>買って遊んだあとも売却しやすい候補を見ます。</p><a href="pages/articles/buy-used.html">記事を読む</a></article>
+        <article class="card"><h3>売るなら今か</h3><p>保有か売却かを考えるときの見方をまとめます。</p><a href="pages/articles/sell-timing.html">記事を読む</a></article>
+      </div>
+    </section>
+    <section><h2>注目ソフト</h2><div class="grid"><article class="card"><h3>スーパーマリオ 3Dコレクション</h3><p>中古価格: <strong>¥7,390</strong></p><p>暫定プレミア指数: <strong>91</strong></p><p>期間限定生産でプレミア候補になりやすい。現在の暫定プレミア指数は91で、値崩れ率は未入力です。</p></article><article class="card"><h3>ゼルダの伝説 ティアーズ オブ ザ キングダム</h3><p>中古価格: <strong>¥7,080</strong></p><p>暫定プレミア指数: <strong>81</strong></p><p>大型続編で需要が継続しやすい。現在の暫定プレミア指数は81で、値崩れ率は未入力です。</p></article><article class="card"><h3>Xenoblade2</h3><p>中古価格: <strong>¥6,700</strong></p><p>暫定プレミア指数: <strong>80</strong></p><p>流通とファン需要から高騰候補になりやすい。現在の暫定プレミア指数は80で、値崩れ率は未入力です。</p></article><article class="card"><h3>大乱闘スマッシュブラザーズ SPECIAL</h3><p>中古価格: <strong>¥5,798</strong></p><p>暫定プレミア指数: <strong>78</strong></p><p>対戦需要が長く続き中古価格が残りやすい。現在の暫定プレミア指数は78で、値崩れ率は未入力です。</p></article><article class="card"><h3>メトロイド ドレッド</h3><p>中古価格: <strong>¥5,770</strong></p><p>暫定プレミア指数: <strong>78</strong></p><p>コアファン需要と価格維持を確認。現在の暫定プレミア指数は78で、値崩れ率は未入力です。</p></article></div></section>
+    <p class="note">対象はSwitchパッケージ版中古ソフトです。DL版セール価格は初期MVPでは対象外です。</p>
+    </div></main>
+  <footer><div class="wrap">価格は確認時点の参考価格です。実際の販売価格・買取価格は各サイトで確認してください。プレミア指数は独自算出であり、投資助言ではありません。外部リンクには将来アフィリエイトリンクを含む場合があります。</div></footer>
+</body>
+</html>

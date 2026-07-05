@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Switchソフト プレミア化候補 | Switch資産価値ナビ</title>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#1f2937; --sub:#667085; --line:#d8dee8; --green:#14745a; --orange:#c25b22; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    header { background:#101828; color:#fff; padding:26px 18px 22px; border-bottom:4px solid var(--green); }
+    .wrap { width:min(1240px, calc(100% - 28px)); margin:0 auto; }
+    h1 { margin:0 0 8px; font-size:clamp(28px,4vw,42px); line-height:1.15; letter-spacing:0; }
+    h2 { margin:0 0 10px; font-size:22px; letter-spacing:0; }
+    h3 { margin:0 0 6px; font-size:17px; letter-spacing:0; }
+    .lead { margin:0; color:#d0d5dd; max-width:900px; }
+    main { padding:20px 0 36px; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .site-nav a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.32); border-radius:6px; padding:6px 10px; font-size:13px; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .stat,.panel,.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; }
+    .stat span { display:block; color:var(--sub); font-size:12px; }
+    .stat strong { display:block; margin-top:3px; font-size:24px; line-height:1.2; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .article-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .article-body { max-width: 880px; }
+    .article-body p { margin: 0 0 14px; }
+    .article-body ul { margin: 0 0 16px 20px; padding: 0; }
+    .article-body li { margin-bottom: 6px; }
+    .grid a,.source a { color:var(--green); font-weight:700; text-decoration:none; }
+    .toolbar { display:grid; grid-template-columns:minmax(180px,1fr) auto; gap:12px; margin-bottom:14px; align-items:center; }
+    input { width:100%; min-height:42px; border:1px solid var(--line); border-radius:6px; padding:0 12px; font:inherit; background:#fff; }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    button { min-height:40px; border:1px solid var(--line); border-radius:6px; padding:0 12px; background:#fff; color:var(--ink); font:inherit; cursor:pointer; }
+    button.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .table-shell { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+    table { width:100%; min-width:1320px; border-collapse:collapse; }
+    th,td { padding:11px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:14px; }
+    th { background:#f2f4f7; color:#344054; font-size:12px; white-space:nowrap; }
+    .rank { width:48px; font-weight:700; color:var(--green); }
+    .title { min-width:230px; font-weight:700; }
+    .title span { display:block; color:var(--sub); font-size:12px; font-weight:500; }
+    .price { white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .drop { white-space:nowrap; font-weight:700; color:var(--orange); }
+    .index-cell { min-width:148px; }
+    .index-number { display:flex; justify-content:space-between; gap:8px; margin-bottom:5px; font-size:12px; }
+    .index-number strong { font-size:18px; line-height:1; }
+    .bar { height:8px; border-radius:999px; overflow:hidden; background:#e5e7eb; }
+    .bar span { display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--orange)); }
+    .badge { display:inline-block; border-radius:999px; padding:3px 9px; background:#eaf7f2; color:var(--green); font-size:12px; font-weight:700; white-space:nowrap; }
+    .badge.muted { background:#f2f4f7; color:#475467; }
+    .comment { min-width:310px; color:#344054; }
+    .source { min-width:120px; }
+    .cta-cell { min-width:150px; }
+    .cta-link { display:inline-block; border-radius:6px; padding:7px 10px; background:var(--green); color:#fff; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .cta-link.secondary { background:#344054; }
+    .note { color:var(--sub); font-size:13px; margin:14px 2px 0; }
+    footer { padding:20px 0 32px; color:var(--sub); font-size:13px; }
+    @media (max-width:780px) { .stats,.grid,.article-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .toolbar{grid-template-columns:1fr;} .filters{justify-content:flex-start;} button{flex:1 1 auto;} }
+    @media (max-width:520px) { .stats,.grid,.article-grid{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>Switchソフト プレミア化候補</h1><p class="lead">限定性、希少性、シリーズ人気からプレミア化しやすい候補を確認します。</p>
+    <nav class="site-nav" aria-label="主要ページ">
+      <a href="../index.html">トップ</a>
+      <a href="../pages/ranking.html">資産価値ランキング</a>
+      <a href="../pages/buy-ranking.html">買い時</a>
+      <a href="../pages/sell-ranking.html">売り時</a>
+      <a href="../pages/premium-candidates.html">プレミア候補</a>
+      <a href="../pages/disclaimer.html">免責</a>
+    </nav>
+    </div></header>
+  <main><div class="wrap">
+    <section class="stats" aria-label="集計">
+      <div class="stat"><span>掲載本数</span><strong>20</strong></div>
+      <div class="stat"><span>プレミア候補</span><strong>3</strong></div>
+      <div class="stat"><span>買い時候補</span><strong>17</strong></div>
+      <div class="stat"><span>価格未入力</span><strong>0</strong></div>
+    </section>
+    
+    <section class="panel">
+      <h2>暫定判定について</h2>
+      <p>初期MVPでは、中古価格、カテゴリ、限定性、シリーズ需要を中心に暫定プレミア指数を算出しています。買取価格、過去最高価格、過去最安価格が入ると、判定精度を上げていきます。</p>
+    </section>
+    
+    <section class="toolbar" aria-label="検索とフィルタ">
+      <input id="search" type="search" placeholder="ソフト名で検索">
+      <div class="filters">
+        <button class="active" data-filter="all">すべて</button>
+        <button data-filter="premium">プレミア候補</button>
+        <button data-filter="buy">買い時</button>
+        <button data-filter="missing">価格未入力</button>
+      </div>
+    </section>
+    <section class="table-shell" aria-label="ランキング表">
+      <table>
+        <thead><tr><th>順位</th><th>ソフト名</th><th>中古価格</th><th>新品価格</th><th>買取価格</th><th>過去最高</th><th>過去最安</th><th>値崩れ率</th><th>暫定プレミア指数</th><th>買い時判定</th><th>売り時判定</th><th>AIコメント</th><th>価格リンク</th><th>確認元</th></tr></thead>
+        <tbody id="rows">
+            <tr data-index="プレミア候補" data-buy="今買っても損しにくい候補" data-sell="保有も可">
+              <td class="rank">1</td>
+              <td class="title">スーパーマリオ 3Dコレクション<span>通常版 / 限定・希少</span></td>
+              <td class="price">¥7,390</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>91</strong><span>プレミア候補</span></div><div class="bar"><span style="width:91%"></span></div></td>
+              <td><span class="badge">今買っても損しにくい候補</span></td>
+              <td><span class="badge muted">保有も可</span></td>
+              <td class="comment">期間限定生産でプレミア候補になりやすい。現在の暫定プレミア指数は91で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%203D%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%203D%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="プレミア候補" data-buy="今買っても損しにくい候補" data-sell="保有も可">
+              <td class="rank">2</td>
+              <td class="title">ゼルダの伝説 ティアーズ オブ ザ キングダム<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥7,080</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>81</strong><span>プレミア候補</span></div><div class="bar"><span style="width:81%"></span></div></td>
+              <td><span class="badge">今買っても損しにくい候補</span></td>
+              <td><span class="badge muted">保有も可</span></td>
+              <td class="comment">大型続編で需要が継続しやすい。現在の暫定プレミア指数は81で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%86%E3%82%A3%E3%82%A2%E3%83%BC%E3%82%BA%20%E3%82%AA%E3%83%96%20%E3%82%B6%20%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%86%E3%82%A3%E3%82%A2%E3%83%BC%E3%82%BA%20%E3%82%AA%E3%83%96%20%E3%82%B6%20%E3%82%AD%E3%83%B3%E3%82%B0%E3%83%80%E3%83%A0%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="プレミア候補" data-buy="今買っても損しにくい候補" data-sell="保有も可">
+              <td class="rank">3</td>
+              <td class="title">Xenoblade2<span>通常版 / RPG</span></td>
+              <td class="price">¥6,700</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>80</strong><span>プレミア候補</span></div><div class="bar"><span style="width:80%"></span></div></td>
+              <td><span class="badge">今買っても損しにくい候補</span></td>
+              <td><span class="badge muted">保有も可</span></td>
+              <td class="comment">流通とファン需要から高騰候補になりやすい。現在の暫定プレミア指数は80で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade2%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade2%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">4</td>
+              <td class="title">大乱闘スマッシュブラザーズ SPECIAL<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥5,798</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>78</strong><span>資産価値高め</span></div><div class="bar"><span style="width:78%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">対戦需要が長く続き中古価格が残りやすい。現在の暫定プレミア指数は78で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E5%A4%A7%E4%B9%B1%E9%97%98%E3%82%B9%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA%20SPECIAL%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E5%A4%A7%E4%B9%B1%E9%97%98%E3%82%B9%E3%83%9E%E3%83%83%E3%82%B7%E3%83%A5%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA%20SPECIAL%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">5</td>
+              <td class="title">メトロイド ドレッド<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥5,770</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>78</strong><span>資産価値高め</span></div><div class="bar"><span style="width:78%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">コアファン需要と価格維持を確認。現在の暫定プレミア指数は78で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%A1%E3%83%88%E3%83%AD%E3%82%A4%E3%83%89%20%E3%83%89%E3%83%AC%E3%83%83%E3%83%89%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%A1%E3%83%88%E3%83%AD%E3%82%A4%E3%83%89%20%E3%83%89%E3%83%AC%E3%83%83%E3%83%89%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">6</td>
+              <td class="title">Xenoblade Definitive Edition<span>通常版 / RPG</span></td>
+              <td class="price">¥5,300</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>77</strong><span>資産価値高め</span></div><div class="bar"><span style="width:77%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">シリーズファン需要が強く価格が残りやすい。現在の暫定プレミア指数は77で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade%20Definitive%20Edition%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade%20Definitive%20Edition%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">7</td>
+              <td class="title">Fire Emblem Engage<span>通常版 / シミュレーションRPG</span></td>
+              <td class="price">¥5,300</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>77</strong><span>資産価値高め</span></div><div class="bar"><span style="width:77%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">風花雪月との相場差を見る。現在の暫定プレミア指数は77で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0%20%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%20Switch%20%E9%80%9A%E5%B8%B8%E7%89%88" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0%20%E3%82%A8%E3%83%B3%E3%82%B2%E3%83%BC%E3%82%B8%20Switch%20%E9%80%9A%E5%B8%B8%E7%89%88" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">8</td>
+              <td class="title">ゼルダの伝説 ブレス オブ ザ ワイルド<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,730</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>75</strong><span>資産価値高め</span></div><div class="bar"><span style="width:75%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">定番需要が強く中古価格が崩れにくい。現在の暫定プレミア指数は75で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%96%E3%83%AC%E3%82%B9%20%E3%82%AA%E3%83%96%20%E3%82%B6%20%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%BC%E3%83%AB%E3%83%80%E3%81%AE%E4%BC%9D%E8%AA%AC%20%E3%83%96%E3%83%AC%E3%82%B9%20%E3%82%AA%E3%83%96%20%E3%82%B6%20%E3%83%AF%E3%82%A4%E3%83%AB%E3%83%89%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">9</td>
+              <td class="title">スーパーマリオ オデッセイ<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,560</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>75</strong><span>資産価値高め</span></div><div class="bar"><span style="width:75%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">定番アクションで中古需要が安定しやすい。現在の暫定プレミア指数は75で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%20%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%20%E3%82%AA%E3%83%87%E3%83%83%E3%82%BB%E3%82%A4%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">10</td>
+              <td class="title">スーパーマリオ 3Dワールド + フューリーワールド<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,740</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>75</strong><span>資産価値高め</span></div><div class="bar"><span style="width:75%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">マリオ系定番として中古需要が安定。現在の暫定プレミア指数は75で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%203D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%2B%20%E3%83%95%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%203D%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20%2B%20%E3%83%95%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">11</td>
+              <td class="title">スプラトゥーン3<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,900</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>75</strong><span>資産価値高め</span></div><div class="bar"><span style="width:75%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">人気と流通量のバランスを見る対象。現在の暫定プレミア指数は75で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B33%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%B9%E3%83%97%E3%83%A9%E3%83%88%E3%82%A5%E3%83%BC%E3%83%B33%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">12</td>
+              <td class="title">Xenoblade3<span>通常版 / RPG</span></td>
+              <td class="price">¥3,798</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>73</strong><span>資産価値高め</span></div><div class="bar"><span style="width:73%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">現行RPGの価格維持を見る。現在の暫定プレミア指数は73で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade3%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=Xenoblade3%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">13</td>
+              <td class="title">Fire Emblem 風花雪月<span>通常版 / シミュレーションRPG</span></td>
+              <td class="price">¥3,980</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>73</strong><span>資産価値高め</span></div><div class="bar"><span style="width:73%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">評価が高く中古需要が安定しやすい。現在の暫定プレミア指数は73で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0%20%E9%A2%A8%E8%8A%B1%E9%9B%AA%E6%9C%88%20Switch%20%E4%B8%AD%E5%8F%A4/" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://search.rakuten.co.jp/search/mall/%E3%83%95%E3%82%A1%E3%82%A4%E3%82%A2%E3%83%BC%E3%82%A8%E3%83%A0%E3%83%96%E3%83%AC%E3%83%A0%20%E9%A2%A8%E8%8A%B1%E9%9B%AA%E6%9C%88%20Switch%20%E4%B8%AD%E5%8F%A4/" target="_blank" rel="nofollow noopener">楽天市場検索結果</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">14</td>
+              <td class="title">マリオカート8 デラックス<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥3,590</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>71</strong><span>資産価値高め</span></div><div class="bar"><span style="width:71%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">長期定番で中古回転が速い。現在の暫定プレミア指数は71で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%9E%E3%83%AA%E3%82%AA%E3%82%AB%E3%83%BC%E3%83%888%20%E3%83%87%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%9E%E3%83%AA%E3%82%AA%E3%82%AB%E3%83%BC%E3%83%888%20%E3%83%87%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">15</td>
+              <td class="title">New スーパーマリオブラザーズ U デラックス<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,370</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>71</strong><span>資産価値高め</span></div><div class="bar"><span style="width:71%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">家族需要があり価格が残りやすい。現在の暫定プレミア指数は71で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=New%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA%20U%20%E3%83%87%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=New%20%E3%82%B9%E3%83%BC%E3%83%91%E3%83%BC%E3%83%9E%E3%83%AA%E3%82%AA%E3%83%96%E3%83%A9%E3%82%B6%E3%83%BC%E3%82%BA%20U%20%E3%83%87%E3%83%A9%E3%83%83%E3%82%AF%E3%82%B9%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">16</td>
+              <td class="title">あつまれ どうぶつの森<span>通常版 / 任天堂定番</span></td>
+              <td class="price">¥4,450</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>71</strong><span>資産価値高め</span></div><div class="bar"><span style="width:71%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">本数は多いが定番需要の確認対象。現在の暫定プレミア指数は71で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%81%82%E3%81%A4%E3%81%BE%E3%82%8C%20%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E3%81%AE%E6%A3%AE%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%81%82%E3%81%A4%E3%81%BE%E3%82%8C%20%E3%81%A9%E3%81%86%E3%81%B6%E3%81%A4%E3%81%AE%E6%A3%AE%20Nintendo%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="買い時候補" data-sell="買取価格待ち">
+              <td class="rank">17</td>
+              <td class="title">オクトパストラベラーII<span>通常版 / RPG</span></td>
+              <td class="price">¥4,400</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>71</strong><span>資産価値高め</span></div><div class="bar"><span style="width:71%"></span></div></td>
+              <td><span class="badge">買い時候補</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">続編の中古価格維持を見る。現在の暫定プレミア指数は71で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%AA%E3%82%AF%E3%83%88%E3%83%91%E3%82%B9%E3%83%88%E3%83%A9%E3%83%99%E3%83%A9%E3%83%BCII%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%AA%E3%82%AF%E3%83%88%E3%83%91%E3%82%B9%E3%83%88%E3%83%A9%E3%83%99%E3%83%A9%E3%83%BCII%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="様子見" data-sell="買取価格待ち">
+              <td class="rank">18</td>
+              <td class="title">ドラゴンクエストビルダーズ2<span>通常版 / RPG</span></td>
+              <td class="price">¥3,300</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>68</strong><span>資産価値高め</span></div><div class="bar"><span style="width:68%"></span></div></td>
+              <td><span class="badge">様子見</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">根強い需要があり価格維持を確認したい。現在の暫定プレミア指数は68で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%93%E3%83%AB%E3%83%80%E3%83%BC%E3%82%BA2%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%93%E3%83%AB%E3%83%80%E3%83%BC%E3%82%BA2%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="様子見" data-sell="買取価格待ち">
+              <td class="rank">19</td>
+              <td class="title">ドラゴンクエストモンスターズ3 魔族の王子とエルフの旅<span>通常版 / RPG</span></td>
+              <td class="price">¥3,270</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>68</strong><span>資産価値高め</span></div><div class="bar"><span style="width:68%"></span></div></td>
+              <td><span class="badge">様子見</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">DQブランドと流通量のバランスを見る。現在の暫定プレミア指数は68で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://search.rakuten.co.jp/search/mall/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA3%20%E9%AD%94%E6%97%8F%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%A8%E3%82%A8%E3%83%AB%E3%83%95%E3%81%AE%E6%97%85%20Switch%20%E4%B8%AD%E5%8F%A4%20%E9%80%9A%E5%B8%B8%E7%89%88/" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://search.rakuten.co.jp/search/mall/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%82%AF%E3%82%A8%E3%82%B9%E3%83%88%E3%83%A2%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%BC%E3%82%BA3%20%E9%AD%94%E6%97%8F%E3%81%AE%E7%8E%8B%E5%AD%90%E3%81%A8%E3%82%A8%E3%83%AB%E3%83%95%E3%81%AE%E6%97%85%20Switch%20%E4%B8%AD%E5%8F%A4%20%E9%80%9A%E5%B8%B8%E7%89%88/" target="_blank" rel="nofollow noopener">楽天市場検索結果</a></td>
+            </tr>
+            
+            <tr data-index="資産価値高め" data-buy="様子見" data-sell="買取価格待ち">
+              <td class="rank">20</td>
+              <td class="title">オクトパストラベラー<span>通常版 / RPG</span></td>
+              <td class="price">¥3,140</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="price">未入力</td>
+              <td class="drop">未入力</td>
+              <td class="index-cell"><div class="index-number"><strong>68</strong><span>資産価値高め</span></div><div class="bar"><span style="width:68%"></span></div></td>
+              <td><span class="badge">様子見</span></td>
+              <td><span class="badge muted">買取価格待ち</span></td>
+              <td class="comment">初期Switch RPGとして中古需要を確認。現在の暫定プレミア指数は68で、値崩れ率は未入力です。</td>
+              <td class="cta-cell"><a class="cta-link" href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%AA%E3%82%AF%E3%83%88%E3%83%91%E3%82%B9%E3%83%88%E3%83%A9%E3%83%99%E3%83%A9%E3%83%BC%20Switch" target="_blank" rel="nofollow noopener">価格を見る</a></td>
+              <td class="source"><a href="https://www.suruga-ya.jp/search?category=2&amp;search_word=%E3%82%AA%E3%82%AF%E3%83%88%E3%83%91%E3%82%B9%E3%83%88%E3%83%A9%E3%83%99%E3%83%A9%E3%83%BC%20Switch" target="_blank" rel="nofollow noopener">駿河屋</a></td>
+            </tr>
+            </tbody>
+      </table>
+    </section>
+    <script>
+      const search = document.querySelector("#search");
+      const buttons = document.querySelectorAll("button[data-filter]");
+      const trs = Array.from(document.querySelectorAll("#rows tr"));
+      let filter = "all";
+      function visible(row) {
+        const keyword = search.value.trim().toLowerCase();
+        const text = row.textContent.toLowerCase();
+        if (keyword && !text.includes(keyword)) return false;
+        if (filter === "premium") return row.dataset.index === "プレミア候補";
+        if (filter === "buy") return row.dataset.buy.includes("買い") || row.dataset.buy.includes("損しにくい");
+        if (filter === "missing") return row.dataset.index === "未判定";
+        return true;
+      }
+      function render() { trs.forEach(row => { row.style.display = visible(row) ? "" : "none"; }); }
+      buttons.forEach(button => {
+        button.addEventListener("click", () => {
+          buttons.forEach(item => item.classList.remove("active"));
+          button.classList.add("active");
+          filter = button.dataset.filter;
+          render();
+        });
+      });
+      search.addEventListener("input", render);
+    </script>
+    <p class="note">更新日: 2026-06-28</p></div></main>
+  <footer><div class="wrap">価格は確認時点の参考価格です。実際の販売価格・買取価格は各サイトで確認してください。プレミア指数は独自算出であり、投資助言ではありません。外部リンクには将来アフィリエイトリンクを含む場合があります。</div></footer>
+</body>
+</html>

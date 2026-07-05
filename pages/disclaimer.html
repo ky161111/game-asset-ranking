@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>免責・運営方針 | Switch資産価値ナビ</title>
+  <style>
+    :root { --bg:#f5f7fa; --panel:#fff; --ink:#1f2937; --sub:#667085; --line:#d8dee8; --green:#14745a; --orange:#c25b22; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    header { background:#101828; color:#fff; padding:26px 18px 22px; border-bottom:4px solid var(--green); }
+    .wrap { width:min(1240px, calc(100% - 28px)); margin:0 auto; }
+    h1 { margin:0 0 8px; font-size:clamp(28px,4vw,42px); line-height:1.15; letter-spacing:0; }
+    h2 { margin:0 0 10px; font-size:22px; letter-spacing:0; }
+    h3 { margin:0 0 6px; font-size:17px; letter-spacing:0; }
+    .lead { margin:0; color:#d0d5dd; max-width:900px; }
+    main { padding:20px 0 36px; }
+    .site-nav { display:flex; flex-wrap:wrap; gap:8px; margin-top:18px; }
+    .site-nav a { color:#fff; text-decoration:none; border:1px solid rgba(255,255,255,.32); border-radius:6px; padding:6px 10px; font-size:13px; }
+    .stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .stat,.panel,.card { background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:14px 16px; }
+    .stat span { display:block; color:var(--sub); font-size:12px; }
+    .stat strong { display:block; margin-top:3px; font-size:24px; line-height:1.2; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-bottom:16px; }
+    .article-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .article-body { max-width: 880px; }
+    .article-body p { margin: 0 0 14px; }
+    .article-body ul { margin: 0 0 16px 20px; padding: 0; }
+    .article-body li { margin-bottom: 6px; }
+    .grid a,.source a { color:var(--green); font-weight:700; text-decoration:none; }
+    .toolbar { display:grid; grid-template-columns:minmax(180px,1fr) auto; gap:12px; margin-bottom:14px; align-items:center; }
+    input { width:100%; min-height:42px; border:1px solid var(--line); border-radius:6px; padding:0 12px; font:inherit; background:#fff; }
+    .filters { display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    button { min-height:40px; border:1px solid var(--line); border-radius:6px; padding:0 12px; background:#fff; color:var(--ink); font:inherit; cursor:pointer; }
+    button.active { background:var(--green); border-color:var(--green); color:#fff; }
+    .table-shell { overflow-x:auto; border:1px solid var(--line); border-radius:8px; background:var(--panel); }
+    table { width:100%; min-width:1320px; border-collapse:collapse; }
+    th,td { padding:11px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:14px; }
+    th { background:#f2f4f7; color:#344054; font-size:12px; white-space:nowrap; }
+    .rank { width:48px; font-weight:700; color:var(--green); }
+    .title { min-width:230px; font-weight:700; }
+    .title span { display:block; color:var(--sub); font-size:12px; font-weight:500; }
+    .price { white-space:nowrap; font-variant-numeric:tabular-nums; }
+    .drop { white-space:nowrap; font-weight:700; color:var(--orange); }
+    .index-cell { min-width:148px; }
+    .index-number { display:flex; justify-content:space-between; gap:8px; margin-bottom:5px; font-size:12px; }
+    .index-number strong { font-size:18px; line-height:1; }
+    .bar { height:8px; border-radius:999px; overflow:hidden; background:#e5e7eb; }
+    .bar span { display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--orange)); }
+    .badge { display:inline-block; border-radius:999px; padding:3px 9px; background:#eaf7f2; color:var(--green); font-size:12px; font-weight:700; white-space:nowrap; }
+    .badge.muted { background:#f2f4f7; color:#475467; }
+    .comment { min-width:310px; color:#344054; }
+    .source { min-width:120px; }
+    .cta-cell { min-width:150px; }
+    .cta-link { display:inline-block; border-radius:6px; padding:7px 10px; background:var(--green); color:#fff; font-size:12px; font-weight:700; text-decoration:none; white-space:nowrap; }
+    .cta-link.secondary { background:#344054; }
+    .note { color:var(--sub); font-size:13px; margin:14px 2px 0; }
+    footer { padding:20px 0 32px; color:var(--sub); font-size:13px; }
+    @media (max-width:780px) { .stats,.grid,.article-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .toolbar{grid-template-columns:1fr;} .filters{justify-content:flex-start;} button{flex:1 1 auto;} }
+    @media (max-width:520px) { .stats,.grid,.article-grid{grid-template-columns:1fr;} }
+    </style>
+</head>
+<body>
+  <header><div class="wrap"><h1>免責・運営方針</h1><p class="lead">価格情報と独自指標の扱いについて。</p>
+    <nav class="site-nav" aria-label="主要ページ">
+      <a href="../index.html">トップ</a>
+      <a href="../pages/ranking.html">資産価値ランキング</a>
+      <a href="../pages/buy-ranking.html">買い時</a>
+      <a href="../pages/sell-ranking.html">売り時</a>
+      <a href="../pages/premium-candidates.html">プレミア候補</a>
+      <a href="../pages/disclaimer.html">免責</a>
+    </nav>
+    </div></header>
+  <main><div class="wrap">
+    <section class="panel"><h2>価格情報について</h2><p>掲載価格は確認時点の参考価格です。販売価格、買取価格、在庫状況は日々変動します。実際の購入・売却前には必ず各販売店、買取店、フリマサービスの最新情報を確認してください。</p></section>
+    <section class="panel"><h2>プレミア指数について</h2><p>プレミア指数は、中古価格、買取価格、希少性、シリーズ人気などをもとにした独自の参考指標です。将来の価格上昇や利益を保証するものではありません。</p></section>
+    <section class="panel"><h2>投資助言ではありません</h2><p>本サイトはゲームソフトの購入・売却判断を補助する情報サイトです。金融商品や投資助言を扱うものではなく、売買による損益について責任を負いません。</p></section>
+    <section class="panel"><h2>データ取得方針</h2><p>初期MVPでは、外部サイトの規約に配慮し、手動確認とCSV管理を中心に運用します。自動取得を行う場合は、公式API、アフィリエイトAPI、または各サービスの利用規約に従います。</p></section>
+    <section class="panel"><h2>外部リンクと収益化について</h2><p>本サイトでは、販売店、買取サービス、ショッピングモールへの外部リンクを掲載します。将来的にAmazonアソシエイト、楽天アフィリエイト、Yahoo!ショッピング、買取サービス等のアフィリエイトリンクを利用する場合があります。リンク先の商品価格、在庫、買取条件は各サイトの表示を優先してください。</p></section>
+    </div></main>
+  <footer><div class="wrap">価格は確認時点の参考価格です。実際の販売価格・買取価格は各サイトで確認してください。プレミア指数は独自算出であり、投資助言ではありません。外部リンクには将来アフィリエイトリンクを含む場合があります。</div></footer>
+</body>
+</html>
