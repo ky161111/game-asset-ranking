@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ky161111.github.io/game-asset-ranking/sitemap.xml
