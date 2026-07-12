@@ -107,12 +107,16 @@
     .quick-start .panel { border-top:4px solid var(--green); }
     .quick-start .panel:nth-child(2) { border-top-color:var(--orange); }
     .faq { max-width:880px; }
+    #monthly-ranking { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    #monthly-ranking .panel { grid-column:1/-1; }
+    #monthly-ranking ol { margin:8px 0 0; padding-left:20px; }
+    #monthly-ranking li { margin-bottom:8px; }
     details { border-bottom:1px solid var(--line); padding:12px 0; }
     summary { cursor:pointer; font-weight:700; }
     details p { margin:8px 0 0; color:#475467; }
     footer { padding:20px 0 32px; color:var(--sub); font-size:13px; }
-    @media (max-width:780px) { .stats,.grid,.article-grid,.detail-grid{grid-template-columns:repeat(2,minmax(0,1fr));} .toolbar{grid-template-columns:1fr;} .filters{justify-content:flex-start;} button{flex:1 1 auto;} }
-    @media (max-width:520px) { .stats,.grid,.article-grid,.detail-grid{grid-template-columns:1fr;} .kv{grid-template-columns:1fr;} .kv dt{border-bottom:0;} }
+    @media (max-width:780px) { .stats,.grid,.article-grid,.detail-grid,#monthly-ranking{grid-template-columns:repeat(2,minmax(0,1fr));} .toolbar{grid-template-columns:1fr;} .filters{justify-content:flex-start;} button{flex:1 1 auto;} }
+    @media (max-width:520px) { .stats,.grid,.article-grid,.detail-grid,#monthly-ranking{grid-template-columns:1fr;} .kv{grid-template-columns:1fr;} .kv dt{border-bottom:0;} }
     </style>
 </head>
 <body>
@@ -123,6 +127,7 @@
       <a href="pages/buy-ranking.html">買い時</a>
       <a href="pages/sell-ranking.html">売り時</a>
       <a href="pages/premium-candidates.html">プレミア候補</a>
+      <a href="pages/price-history.html">価格推移</a>
       <a href="pages/disclaimer.html">免責</a>
     </nav>
     </div></header>
@@ -143,6 +148,7 @@
         <div class="panel"><h3>値崩れしにくい作品を探したい</h3><p>希少性や需要も含めた独自指数から、長く持ちやすい候補を確認できます。</p><a href="pages/ranking.html" data-analytics-event="internal_navigation" data-game-title="資産価値ランキング" data-link-type="ranking">資産価値ランキングを見る</a></div>
       </div>
     </section>
+    <section aria-labelledby="monthly-title"><h2 id="monthly-title">今月の相場トピック</h2><div id="monthly-ranking"></div><p class="note">価格推移は自前で月次記録しています。作品ごとの相場は<a class="text-link" href="pages/price-history.html">価格推移ページ</a>で確認できます。</p></section>
     <section>
       <h2>読み物</h2>
       <div class="article-grid">
@@ -161,5 +167,6 @@
     <p class="note">対象はSwitchパッケージ版中古ソフトです。DL版セール価格は初期MVPでは対象外です。</p>
     </div></main>
   <footer><div class="wrap">価格は確認時点の参考価格です。実際の販売価格・買取価格は各サイトで確認してください。プレミア指数は独自算出であり、投資助言ではありません。本サイトはアフィリエイト広告を利用する場合があります。</div></footer>
+  <script defer src="assets/price-history.js"></script>
 </body>
 </html>
