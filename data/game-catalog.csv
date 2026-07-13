@@ -1,0 +1,51 @@
+game_id,platform,title,status
+game-001,switch,ゼルダの伝説 ブレス オブ ザ ワイルド,tracking
+game-002,switch,ゼルダの伝説 ティアーズ オブ ザ キングダム,tracking
+game-003,switch,マリオカート8 デラックス,tracking
+game-004,switch,大乱闘スマッシュブラザーズ SPECIAL,tracking
+game-005,switch,スーパーマリオ オデッセイ,tracking
+game-006,switch,スーパーマリオ 3Dコレクション,tracking
+game-007,switch,New スーパーマリオブラザーズ U デラックス,tracking
+game-008,switch,スーパーマリオ 3Dワールド + フューリーワールド,tracking
+game-009,switch,あつまれ どうぶつの森,tracking
+game-010,switch,スプラトゥーン3,tracking
+game-011,switch,スプラトゥーン2,tracking
+game-012,switch,ポケットモンスター ソード,tracking
+game-013,switch,ポケットモンスター シールド,tracking
+game-014,switch,ポケットモンスター ブリリアントダイヤモンド,tracking
+game-015,switch,ポケットモンスター シャイニングパール,tracking
+game-016,switch,ポケットモンスター スカーレット,tracking
+game-017,switch,ポケットモンスター バイオレット,tracking
+game-018,switch,Pokemon LEGENDS アルセウス,tracking
+game-019,switch,Xenoblade Definitive Edition,tracking
+game-020,switch,Xenoblade2,tracking
+game-021,switch,Xenoblade3,tracking
+game-022,switch,Fire Emblem 風花雪月,tracking
+game-023,switch,Fire Emblem Engage,tracking
+game-024,switch,ドラゴンクエストビルダーズ2,tracking
+game-025,switch,ドラゴンクエストモンスターズ3 魔族の王子とエルフの旅,tracking
+game-026,switch,オクトパストラベラー,tracking
+game-027,switch,オクトパストラベラーII,tracking
+game-028,switch,メトロイド ドレッド,tracking
+game-029,switch,桃太郎電鉄 昭和 平成 令和も定番！,tracking
+game-030,switch,桃太郎電鉄ワールド 地球は希望でまわってる！,tracking
+ps5-001,ps5,モンスターハンターワイルズ,pending
+ps5-002,ps5,FINAL FANTASY VII REBIRTH,pending
+ps5-003,ps5,グランツーリスモ7,pending
+ps5-004,ps5,Marvel's Spider-Man 2,pending
+ps5-005,ps5,ドラゴンクエストIII そして伝説へ… HD-2D版,pending
+ps5-006,ps5,龍が如く8,pending
+ps5-007,ps5,Stellar Blade,pending
+ps5-008,ps5,ASTRO BOT,pending
+ps5-009,ps5,ARMORED CORE VI FIRES OF RUBICON,pending
+ps5-010,ps5,メタファー：リファンタジオ,pending
+ps4-001,ps4,ELDEN RING,pending
+ps4-002,ps4,Ghost of Tsushima,pending
+ps4-003,ps4,ペルソナ5 ザ・ロイヤル,pending
+ps4-004,ps4,モンスターハンターワールド：アイスボーン マスターエディション,pending
+ps4-005,ps4,SEKIRO：SHADOWS DIE TWICE,pending
+ps4-006,ps4,FINAL FANTASY VII REMAKE,pending
+ps4-007,ps4,Bloodborne,pending
+ps4-008,ps4,NieR：Automata,pending
+ps4-009,ps4,龍が如く0 誓いの場所,pending
+ps4-010,ps4,十三機兵防衛圏,pending
