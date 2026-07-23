@@ -1,0 +1,10 @@
+{
+  "name": "game-asset-ranking",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-seo.mjs",
+    "check": "node scripts/validate-site.mjs",
+    "test": "npm run build && npm run check"
+  }
+}

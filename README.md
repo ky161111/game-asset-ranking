@@ -20,3 +20,17 @@ month,platform,game_id,title,used_sale_price,buyback_price,source_name,source_ur
 CSVを更新してGitHubへpushすると、価格推移ページ、作品詳細の相場欄、トップページの急騰・急落・買取率ランキングが自動で更新されます。初月は基準月として表示し、2か月目から前月比を表示します。
 
 掲載価格は参考値であり、実際の販売価格・買取価格や価格上昇を保証するものではありません。
+
+## 公開前の生成と検査
+
+Node.jsが使える環境で次を実行します。
+
+```bash
+npm test
+```
+
+この処理で、各HTMLの説明文・canonical・パンくず構造化データ・未完成ページのnoindex、信頼性ページへのリンク、サイトマップを生成し、SEO情報とJSON-LDを検査します。
+
+- `tracking` の作品ページは検索対象にします。
+- `pending` のPS5・PS4カテゴリと作品ページは価格確認が完了するまで `noindex` とし、サイトマップにも含めません。
+- `pages/methodology.html` に価格の対象条件と更新方法を掲載します。
