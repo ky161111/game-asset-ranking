@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-seo.mjs",
+    "build": "node scripts/build-market-data.mjs && node scripts/build-seo.mjs",
     "check": "node scripts/validate-site.mjs",
     "test": "npm run build && npm run check"
   }

@@ -27,6 +27,10 @@ for (const file of await htmlFiles(root)) {
   if (/pages[\\/]games[\\/](ps4|ps5)-\d+\.html$/.test(relative) && !noindex) errors.push(`${relative}: pending page must be noindex`);
   if (/pages[\\/](ps4|ps5)\.html$/.test(relative) && !noindex) errors.push(`${relative}: pending platform page must be noindex`);
   if (/pages[\\/]games[\\/]game-\d+\.html$/.test(relative) && noindex) errors.push(`${relative}: tracking page must be indexable`);
+  if (/pages[\\/]games[\\/]game-00[1-9]\.html$|pages[\\/]games[\\/]game-010\.html$/.test(relative)) {
+    if (!/data-market-insight-game=/.test(html)) errors.push(`${relative}: market insight host missing`);
+    if (!/market-insights\.js/.test(html) || !/market-insights\.css/.test(html)) errors.push(`${relative}: market insight assets missing`);
+  }
   for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
     try { JSON.parse(match[1]); } catch (error) { errors.push(`${relative}: invalid JSON-LD (${error.message})`); }
   }
@@ -42,8 +46,17 @@ const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 for (const forbidden of ["pages/games/ps4-", "pages/games/ps5-", "pages/ps4.html", "pages/ps5.html", "pages/switch.html"]) {
   if (sitemap.includes(forbidden)) errors.push(`sitemap.xml: contains excluded URL ${forbidden}`);
 }
-for (const required of ["pages/methodology.html", "pages/about.html", "pages/games/game-001.html"]) {
+for (const required of ["pages/methodology.html", "pages/about.html", "pages/market-watch.html", "pages/games/game-001.html"]) {
   if (!sitemap.includes(required)) errors.push(`sitemap.xml: missing ${required}`);
+}
+
+const marketSummary = JSON.parse(await readFile(path.join(root, "data/market-summary.json"), "utf8"));
+if (marketSummary.items.length !== 10) errors.push(`market-summary.json: expected 10 games, got ${marketSummary.items.length}`);
+for (const item of marketSummary.items) {
+  if (item.sale.observation_count !== 3) errors.push(`market-summary.json: ${item.game_id} must have 3 observations`);
+  if (!item.sale.min || !item.sale.max || !item.sale.median) errors.push(`market-summary.json: ${item.game_id} has invalid prices`);
+  if (new Set(item.sellers.map((seller) => seller.seller_name)).size !== 3) errors.push(`market-summary.json: ${item.game_id} must have 3 distinct sellers`);
+  if (item.sellers.some((seller) => !seller.source_url.startsWith("https://"))) errors.push(`market-summary.json: ${item.game_id} has invalid source URL`);
 }
 
 if (errors.length) {

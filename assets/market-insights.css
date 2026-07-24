@@ -1,0 +1,10 @@
+.market-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}
+.market-summary>div{border:1px solid #d8dee8;border-radius:8px;padding:11px;background:#f8fafc}
+.market-summary span{display:block;color:#667085;font-size:12px}.market-summary strong{display:block;font-size:20px;margin-top:2px}
+.market-verdict{display:inline-block;border-radius:999px;padding:4px 10px;font-size:13px;font-weight:700;background:#eef4ff;color:#344054}
+.market-verdict.buy{background:#eaf7f2;color:#14745a}.market-verdict.sell{background:#fff1e8;color:#a84412}.market-verdict.hold{background:#f2f4f7;color:#344054}
+.market-sources{margin:12px 0 0;padding-left:20px}.market-sources li{margin-bottom:5px}
+.market-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.market-grid .card{margin:0}
+.market-delta.up{color:#a84412}.market-delta.down{color:#14745a}
+@media(max-width:720px){.market-summary,.market-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.market-summary,.market-grid{grid-template-columns:1fr}}

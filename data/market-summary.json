@@ -1,0 +1,496 @@
+{
+  "generated_from": "data/price-observations.csv",
+  "methodology": "same-condition seller observations; median of selected listings",
+  "items": [
+    {
+      "game_id": "game-001",
+      "platform": "switch",
+      "title": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 4610,
+        "min": 4380,
+        "max": 4620,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4730,
+        "buyback_price": 3700,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -120,
+      "reference_difference_rate": -2.5,
+      "buyback_rate": 80,
+      "verdict": {
+        "key": "hold",
+        "label": "価格維持型",
+        "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋GIGA福岡春日店",
+          "price": 4380,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000001"
+        },
+        {
+          "seller_name": "駿河屋新潟駅南店",
+          "price": 4610,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000001"
+        },
+        {
+          "seller_name": "駿河屋山口大学前店",
+          "price": 4620,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000001"
+        }
+      ]
+    },
+    {
+      "game_id": "game-002",
+      "platform": "switch",
+      "title": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 4620,
+        "min": 4540,
+        "max": 4670,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 7080,
+        "buyback_price": 2700,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -2460,
+      "reference_difference_rate": -34.7,
+      "buyback_rate": 58,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋近見店",
+          "price": 4540,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002738"
+        },
+        {
+          "seller_name": "駿河屋日向店",
+          "price": 4620,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002738"
+        },
+        {
+          "seller_name": "駿河屋ジョイホンパーク吉岡店",
+          "price": 4670,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002738"
+        }
+      ]
+    },
+    {
+      "game_id": "game-003",
+      "platform": "switch",
+      "title": "マリオカート8 デラックス",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 3650,
+        "min": 3360,
+        "max": 3659,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 3590,
+        "buyback_price": 3000,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": 60,
+      "reference_difference_rate": 1.7,
+      "buyback_rate": 82,
+      "verdict": {
+        "key": "hold",
+        "label": "価格維持型",
+        "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋春日部店",
+          "price": 3360,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000004"
+        },
+        {
+          "seller_name": "駿河屋津田沼ビート店",
+          "price": 3650,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000004"
+        },
+        {
+          "seller_name": "駿河屋浜松領家店",
+          "price": 3659,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000004"
+        }
+      ]
+    },
+    {
+      "game_id": "game-004",
+      "platform": "switch",
+      "title": "大乱闘スマッシュブラザーズ SPECIAL",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 5120,
+        "min": 5020,
+        "max": 5180,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 5798,
+        "buyback_price": 4000,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -678,
+      "reference_difference_rate": -11.7,
+      "buyback_rate": 78,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋盛岡MOSSビル店",
+          "price": 5020,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000290"
+        },
+        {
+          "seller_name": "駿河屋鴻巣吹上店",
+          "price": 5120,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000290"
+        },
+        {
+          "seller_name": "駿河屋千葉駅前店",
+          "price": 5180,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000290"
+        }
+      ]
+    },
+    {
+      "game_id": "game-005",
+      "platform": "switch",
+      "title": "スーパーマリオ オデッセイ",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 4300,
+        "min": 4290,
+        "max": 4320,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4560,
+        "buyback_price": 3000,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -260,
+      "reference_difference_rate": -5.7,
+      "buyback_rate": 70,
+      "verdict": {
+        "key": "hold",
+        "label": "価格維持型",
+        "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋イオンモールむさし村山店",
+          "price": 4290,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000073"
+        },
+        {
+          "seller_name": "駿河屋富山北の森店",
+          "price": 4300,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000073"
+        },
+        {
+          "seller_name": "駿河屋鴻巣吹上店",
+          "price": 4320,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000073"
+        }
+      ]
+    },
+    {
+      "game_id": "game-006",
+      "platform": "switch",
+      "title": "スーパーマリオ 3Dコレクション",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 6180,
+        "min": 6110,
+        "max": 6920,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 7390,
+        "buyback_price": 5000,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -1210,
+      "reference_difference_rate": -16.4,
+      "buyback_rate": 81,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋高松瓦町FLAG店",
+          "price": 6110,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001188"
+        },
+        {
+          "seller_name": "駿河屋奈良大安寺店",
+          "price": 6180,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001188"
+        },
+        {
+          "seller_name": "駿河屋本庄店",
+          "price": 6920,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001188"
+        }
+      ]
+    },
+    {
+      "game_id": "game-007",
+      "platform": "switch",
+      "title": "New スーパーマリオブラザーズ U デラックス",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 3930,
+        "min": 3870,
+        "max": 3960,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4370,
+        "buyback_price": 3000,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -440,
+      "reference_difference_rate": -10.1,
+      "buyback_rate": 76,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋秋田オーパ店",
+          "price": 3870,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000325"
+        },
+        {
+          "seller_name": "駿河屋矢板店",
+          "price": 3930,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000325"
+        },
+        {
+          "seller_name": "駿河屋イオン明石店",
+          "price": 3960,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000325"
+        }
+      ]
+    },
+    {
+      "game_id": "game-008",
+      "platform": "switch",
+      "title": "スーパーマリオ 3Dワールド + フューリーワールド",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 3660,
+        "min": 3450,
+        "max": 3690,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4740,
+        "buyback_price": 2300,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -1080,
+      "reference_difference_rate": -22.8,
+      "buyback_rate": 63,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋松山大街道店",
+          "price": 3450,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001187"
+        },
+        {
+          "seller_name": "駿河屋ジョイホンパーク吉岡店",
+          "price": 3660,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001187"
+        },
+        {
+          "seller_name": "駿河屋東海荒尾店",
+          "price": 3690,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001187"
+        }
+      ]
+    },
+    {
+      "game_id": "game-009",
+      "platform": "switch",
+      "title": "あつまれ どうぶつの森",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 3700,
+        "min": 3630,
+        "max": 3930,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4450,
+        "buyback_price": 3800,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -750,
+      "reference_difference_rate": -16.9,
+      "buyback_rate": 103,
+      "verdict": {
+        "key": "buy",
+        "label": "買い時候補",
+        "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋GIGA福岡春日店",
+          "price": 3630,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000913"
+        },
+        {
+          "seller_name": "駿河屋盛岡MOSSビル店",
+          "price": 3700,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000913"
+        },
+        {
+          "seller_name": "駿河屋津田沼ビート店",
+          "price": 3930,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000913"
+        }
+      ]
+    },
+    {
+      "game_id": "game-010",
+      "platform": "switch",
+      "title": "スプラトゥーン3",
+      "checked_at": "2026-07-24",
+      "edition": "通常版",
+      "condition": "中古通常",
+      "sale": {
+        "median": 4500,
+        "min": 4500,
+        "max": 4500,
+        "observation_count": 3
+      },
+      "previous": {
+        "month": "2026-06",
+        "sale_price": 4900,
+        "buyback_price": 2800,
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/"
+      },
+      "reference_difference": -400,
+      "reference_difference_rate": -8.2,
+      "buyback_rate": 62,
+      "verdict": {
+        "key": "watch",
+        "label": "様子見",
+        "reason": "同じ調査方法の価格履歴を蓄積中です。"
+      },
+      "sellers": [
+        {
+          "seller_name": "ワットマンホビーOSC湘南シティ店",
+          "price": 4500,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002171"
+        },
+        {
+          "seller_name": "駿河屋本庄店",
+          "price": 4500,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002171"
+        },
+        {
+          "seller_name": "駿河屋甲府店",
+          "price": 4500,
+          "source_name": "駿河屋取扱店舗一覧",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002171"
+        }
+      ]
+    }
+  ]
+}
