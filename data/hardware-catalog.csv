@@ -1,0 +1,4 @@
+hardware_id,slug,platform,title,model_number,release_date,official_price,official_price_label,official_source_url,condition_scope
+hardware-switch2-jp,switch2-japanese,Nintendo Switch 2,Nintendo Switch 2 日本語・国内専用,BEE-S-KB6CA,2025-06-05,59980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/switch2/lineup/index.html,付属品完備の通常中古品
+hardware-switch-oled-white,switch-oled-white,Nintendo Switch,Nintendo Switch（有機ELモデル）ホワイト,HEG-S-KAAAA,2021-10-08,47980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/detail/switch-oled/index.html?collapsible=0,付属品完備の通常中古品
+hardware-ps5-slim-disc,ps5-slim-disc,PlayStation 5,PlayStation 5 Slim ディスクドライブ搭載,CFI-2000A01,2023-11-10,79980,この型番の公式案内価格,https://blog.ja.playstation.com/2025/12/19/20251219-ps5guide/,付属品完備の通常中古品

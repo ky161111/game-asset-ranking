@@ -17,7 +17,8 @@ const csvRows = (text) => {
 const catalog = csvRows(await readFile(path.join(root, "data/game-catalog.csv"), "utf8"));
 const history = csvRows(await readFile(path.join(root, "data/price-history.csv"), "utf8"));
 const observations = csvRows(await readFile(path.join(root, "data/price-observations.csv"), "utf8"));
-const today = observations.map((row) => row.observed_at).sort().at(-1);
+const hardwareObservations = csvRows(await readFile(path.join(root, "data/hardware-observations.csv"), "utf8"));
+const today = [...observations, ...hardwareObservations].map((row) => row.observed_at).sort().at(-1);
 const games = new Map(catalog.map((game) => [game.game_id, game]));
 const marketGameIds = new Set(observations.map((row) => row.game_id));
 const observationsByGame = observations.reduce((groups, row) => {
@@ -78,6 +79,8 @@ function breadcrumbs(relative, html, game) {
     items.push({ name: platformLabel[game.platform], url: new URL(platformPage, baseUrl).href });
   } else if (relative.startsWith("pages/articles/")) {
     items.push({ name: "相場の読み方", url: new URL("pages/articles/value-retention.html", baseUrl).href });
+  } else if (relative.startsWith("pages/hardware/")) {
+    items.push({ name: "ゲーム機本体の中古相場", url: new URL("pages/hardware.html", baseUrl).href });
   }
   items.push({ name: pageTitle(html), url: pageUrl(relative) });
   return items;

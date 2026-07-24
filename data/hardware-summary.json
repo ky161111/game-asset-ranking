@@ -1,0 +1,149 @@
+{
+  "generated_from": [
+    "data/hardware-catalog.csv",
+    "data/hardware-observations.csv"
+  ],
+  "methodology": "same-model complete used listings; median of verified observations",
+  "items": [
+    {
+      "hardware_id": "hardware-switch2-jp",
+      "slug": "switch2-japanese",
+      "platform": "Nintendo Switch 2",
+      "title": "Nintendo Switch 2 日本語・国内専用",
+      "model_number": "BEE-S-KB6CA",
+      "release_date": "2025-06-05",
+      "official_price": 59980,
+      "official_price_label": "現在のメーカー希望小売価格",
+      "official_source_url": "https://www.nintendo.com/jp/hardware/switch2/lineup/index.html",
+      "condition_scope": "付属品完備の通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 47500,
+        "min": 47500,
+        "max": 47500,
+        "observation_count": 3
+      },
+      "value_retention_rate": 79,
+      "saving_vs_official": 12480,
+      "evidence": {
+        "key": "standard",
+        "label": "参考度：標準",
+        "note": "同じ条件の3店舗価格を確認"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋 山口大学前店",
+          "price": 47500,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/112100001",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋 市原五井店",
+          "price": 47500,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/112100001",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋 春日部店",
+          "price": 47500,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/112100001",
+          "note": "欠品や状態難の表示がない出品"
+        }
+      ]
+    },
+    {
+      "hardware_id": "hardware-switch-oled-white",
+      "slug": "switch-oled-white",
+      "platform": "Nintendo Switch",
+      "title": "Nintendo Switch（有機ELモデル）ホワイト",
+      "model_number": "HEG-S-KAAAA",
+      "release_date": "2021-10-08",
+      "official_price": 47980,
+      "official_price_label": "現在のメーカー希望小売価格",
+      "official_source_url": "https://www.nintendo.com/jp/hardware/detail/switch-oled/index.html?collapsible=0",
+      "condition_scope": "付属品完備の通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 31400,
+        "min": 31400,
+        "max": 31400,
+        "observation_count": 1
+      },
+      "value_retention_rate": 65,
+      "saving_vs_official": 16580,
+      "evidence": {
+        "key": "limited",
+        "label": "参考度：低",
+        "note": "1件のみ確認。価格幅は未把握"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋通販",
+          "price": 31400,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/detail/109102906",
+          "note": "商品詳細の通常中古価格"
+        }
+      ]
+    },
+    {
+      "hardware_id": "hardware-ps5-slim-disc",
+      "slug": "ps5-slim-disc",
+      "platform": "PlayStation 5",
+      "title": "PlayStation 5 Slim ディスクドライブ搭載",
+      "model_number": "CFI-2000A01",
+      "release_date": "2023-11-10",
+      "official_price": 79980,
+      "official_price_label": "この型番の公式案内価格",
+      "official_source_url": "https://blog.ja.playstation.com/2025/12/19/20251219-ps5guide/",
+      "condition_scope": "付属品完備の通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 72800,
+        "min": 71410,
+        "max": 73260,
+        "observation_count": 3
+      },
+      "value_retention_rate": 91,
+      "saving_vs_official": 7180,
+      "evidence": {
+        "key": "standard",
+        "label": "参考度：標準",
+        "note": "同じ条件の3店舗価格を確認"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋 イオン明石店",
+          "price": 71410,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/110100586",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋 千葉中央店",
+          "price": 72800,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/110100586",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "ブックマーケット函館美原店",
+          "price": 73260,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/110100586",
+          "note": "欠品や状態難の表示がない出品"
+        }
+      ]
+    }
+  ]
+}

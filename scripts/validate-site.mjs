@@ -46,7 +46,7 @@ const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 for (const forbidden of ["pages/games/ps4-", "pages/games/ps5-", "pages/ps4.html", "pages/ps5.html", "pages/switch.html"]) {
   if (sitemap.includes(forbidden)) errors.push(`sitemap.xml: contains excluded URL ${forbidden}`);
 }
-for (const required of ["pages/methodology.html", "pages/about.html", "pages/market-watch.html", "pages/games/game-001.html"]) {
+for (const required of ["pages/methodology.html", "pages/about.html", "pages/market-watch.html", "pages/hardware.html", "pages/hardware/switch2-japanese.html", "pages/hardware/switch-oled-white.html", "pages/hardware/ps5-slim-disc.html", "pages/games/game-001.html"]) {
   if (!sitemap.includes(required)) errors.push(`sitemap.xml: missing ${required}`);
 }
 
@@ -57,6 +57,16 @@ for (const item of marketSummary.items) {
   if (!item.sale.min || !item.sale.max || !item.sale.median) errors.push(`market-summary.json: ${item.game_id} has invalid prices`);
   if (new Set(item.sellers.map((seller) => seller.seller_name)).size !== 3) errors.push(`market-summary.json: ${item.game_id} must have 3 distinct sellers`);
   if (item.sellers.some((seller) => !seller.source_url.startsWith("https://"))) errors.push(`market-summary.json: ${item.game_id} has invalid source URL`);
+}
+
+const hardwareSummary = JSON.parse(await readFile(path.join(root, "data/hardware-summary.json"), "utf8"));
+if (hardwareSummary.items.length !== 3) errors.push(`hardware-summary.json: expected 3 models, got ${hardwareSummary.items.length}`);
+for (const item of hardwareSummary.items) {
+  if (item.sale.observation_count < 1) errors.push(`hardware-summary.json: ${item.hardware_id} has no observations`);
+  if (!item.sale.min || !item.sale.max || !item.sale.median || !item.official_price) errors.push(`hardware-summary.json: ${item.hardware_id} has invalid prices`);
+  if (new Set(item.sellers.map((seller) => seller.seller_name)).size !== item.sale.observation_count) errors.push(`hardware-summary.json: ${item.hardware_id} has duplicate sellers`);
+  if (item.sellers.some((seller) => !seller.source_url.startsWith("https://"))) errors.push(`hardware-summary.json: ${item.hardware_id} has invalid source URL`);
+  if (item.sale.observation_count < 3 && item.evidence.key !== "limited") errors.push(`hardware-summary.json: ${item.hardware_id} must disclose limited evidence`);
 }
 
 if (errors.length) {
