@@ -17,7 +17,9 @@
     .then(({ items }) => {
       const grid = document.querySelector("[data-hardware-grid]");
       if (grid) {
-        grid.innerHTML = items.map((item) => `
+        const era = grid.dataset.era;
+        const visibleItems = era ? items.filter((item) => item.era === era) : items;
+        grid.innerHTML = visibleItems.map((item) => `
           <article class="hardware-card">
             <span class="evidence ${item.evidence.key}">${item.evidence.label}</span>
             <h2>${item.title}</h2>
@@ -61,7 +63,7 @@
             <dt>型番</dt><dd>${item.model_number}</dd>
             <dt>発売日</dt><dd>${date(item.release_date)}</dd>
             <dt>価格の基準</dt><dd>${item.official_price_label} ${money(item.official_price)}</dd>
-            <dt>公式情報</dt><dd><a href="${item.official_source_url}" target="_blank" rel="noopener">メーカーのページで確認</a></dd>
+            <dt>価格情報</dt><dd><a href="${item.official_source_url}" target="_blank" rel="noopener">価格の出典を確認</a></dd>
           </dl>
         </section>`;
     })

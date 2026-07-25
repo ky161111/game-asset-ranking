@@ -1,4 +1,7 @@
-hardware_id,slug,platform,title,model_number,release_date,official_price,official_price_label,official_source_url,condition_scope
-hardware-switch2-jp,switch2-japanese,Nintendo Switch 2,Nintendo Switch 2 日本語・国内専用,BEE-S-KB6CA,2025-06-05,59980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/switch2/lineup/index.html,付属品完備の通常中古品
-hardware-switch-oled-white,switch-oled-white,Nintendo Switch,Nintendo Switch（有機ELモデル）ホワイト,HEG-S-KAAAA,2021-10-08,47980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/detail/switch-oled/index.html?collapsible=0,付属品完備の通常中古品
-hardware-ps5-slim-disc,ps5-slim-disc,PlayStation 5,PlayStation 5 Slim ディスクドライブ搭載,CFI-2000A01,2023-11-10,79980,この型番の公式案内価格,https://blog.ja.playstation.com/2025/12/19/20251219-ps5guide/,付属品完備の通常中古品
+hardware_id,slug,era,platform,title,model_number,release_date,official_price,official_price_label,official_source_url,condition_scope
+hardware-switch2-jp,switch2-japanese,modern,Nintendo Switch 2,Nintendo Switch 2 日本語・国内専用,BEE-S-KB6CA,2025-06-05,59980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/switch2/lineup/index.html,付属品完備の通常中古品
+hardware-switch-oled-white,switch-oled-white,modern,Nintendo Switch,Nintendo Switch（有機ELモデル）ホワイト,HEG-S-KAAAA,2021-10-08,47980,現在のメーカー希望小売価格,https://www.nintendo.com/jp/hardware/detail/switch-oled/index.html?collapsible=0,付属品完備の通常中古品
+hardware-ps5-slim-disc,ps5-slim-disc,modern,PlayStation 5,PlayStation 5 Slim ディスクドライブ搭載,CFI-2000A01,2023-11-10,79980,この型番の公式案内価格,https://blog.ja.playstation.com/2025/12/19/20251219-ps5guide/,付属品完備の通常中古品
+hardware-new3dsll-blue,new3dsll-metallic-blue,retro,Newニンテンドー3DS LL,Newニンテンドー3DS LL メタリックブルー,RED-S-BAAA,2014-10-11,20680,発売時の希望小売価格（税込）,https://www.nintendo.co.jp/hardware/3dsseries/new3dsll/index.html,箱と標準付属品がそろった通常中古品
+hardware-ps2-90000cb,ps2-90000-charcoal,retro,PlayStation 2,PlayStation 2 チャコール・ブラック,SCPH-90000CB,2007-11-22,16762,発売時定価（商品情報）,https://www.suruga-ya.jp/product/detail/144010693,箱と標準付属品がそろった通常中古品
+hardware-gba-sp-pearl-blue,gba-sp-pearl-blue,retro,ゲームボーイアドバンスSP,ゲームボーイアドバンスSP パールブルー,AGS-S-PBA,2003-09-05,10266,発売時定価（商品情報）,https://www.suruga-ya.jp/product/detail/175010046,箱と標準付属品がそろった通常中古品

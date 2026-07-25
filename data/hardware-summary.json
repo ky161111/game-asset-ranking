@@ -8,6 +8,7 @@
     {
       "hardware_id": "hardware-switch2-jp",
       "slug": "switch2-japanese",
+      "era": "modern",
       "platform": "Nintendo Switch 2",
       "title": "Nintendo Switch 2 日本語・国内専用",
       "model_number": "BEE-S-KB6CA",
@@ -60,6 +61,7 @@
     {
       "hardware_id": "hardware-switch-oled-white",
       "slug": "switch-oled-white",
+      "era": "modern",
       "platform": "Nintendo Switch",
       "title": "Nintendo Switch（有機ELモデル）ホワイト",
       "model_number": "HEG-S-KAAAA",
@@ -96,6 +98,7 @@
     {
       "hardware_id": "hardware-ps5-slim-disc",
       "slug": "ps5-slim-disc",
+      "era": "modern",
       "platform": "PlayStation 5",
       "title": "PlayStation 5 Slim ディスクドライブ搭載",
       "model_number": "CFI-2000A01",
@@ -142,6 +145,149 @@
           "source_name": "駿河屋",
           "source_url": "https://www.suruga-ya.jp/product/other/110100586",
           "note": "欠品や状態難の表示がない出品"
+        }
+      ]
+    },
+    {
+      "hardware_id": "hardware-new3dsll-blue",
+      "slug": "new3dsll-metallic-blue",
+      "era": "retro",
+      "platform": "Newニンテンドー3DS LL",
+      "title": "Newニンテンドー3DS LL メタリックブルー",
+      "model_number": "RED-S-BAAA",
+      "release_date": "2014-10-11",
+      "official_price": 20680,
+      "official_price_label": "発売時の希望小売価格（税込）",
+      "official_source_url": "https://www.nintendo.co.jp/hardware/3dsseries/new3dsll/index.html",
+      "condition_scope": "箱と標準付属品がそろった通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 43330,
+        "min": 40780,
+        "max": 45100,
+        "observation_count": 3
+      },
+      "value_retention_rate": 210,
+      "saving_vs_official": -22650,
+      "evidence": {
+        "key": "standard",
+        "label": "参考度：標準",
+        "note": "同じ条件の3店舗価格を確認"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋新潟駅南店",
+          "price": 40780,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/104012270",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋 岐阜マーサ21店",
+          "price": 43330,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/104012270",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋通販",
+          "price": 45100,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/detail/104012270",
+          "note": "タイムセール価格を確認"
+        }
+      ]
+    },
+    {
+      "hardware_id": "hardware-ps2-90000cb",
+      "slug": "ps2-90000-charcoal",
+      "era": "retro",
+      "platform": "PlayStation 2",
+      "title": "PlayStation 2 チャコール・ブラック",
+      "model_number": "SCPH-90000CB",
+      "release_date": "2007-11-22",
+      "official_price": 16762,
+      "official_price_label": "発売時定価（商品情報）",
+      "official_source_url": "https://www.suruga-ya.jp/product/detail/144010693",
+      "condition_scope": "箱と標準付属品がそろった通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 19000,
+        "min": 19000,
+        "max": 19290,
+        "observation_count": 3
+      },
+      "value_retention_rate": 113,
+      "saving_vs_official": -2238,
+      "evidence": {
+        "key": "standard",
+        "label": "参考度：標準",
+        "note": "同じ条件の3店舗価格を確認"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋イオンタウン郡山店",
+          "price": 19000,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/144010693",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋宇都宮テクノ店",
+          "price": 19000,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/144010693",
+          "note": "欠品や状態難の表示がない出品"
+        },
+        {
+          "seller_name": "駿河屋新潟駅南店",
+          "price": 19290,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/other/144010693",
+          "note": "欠品や状態難の表示がない出品"
+        }
+      ]
+    },
+    {
+      "hardware_id": "hardware-gba-sp-pearl-blue",
+      "slug": "gba-sp-pearl-blue",
+      "era": "retro",
+      "platform": "ゲームボーイアドバンスSP",
+      "title": "ゲームボーイアドバンスSP パールブルー",
+      "model_number": "AGS-S-PBA",
+      "release_date": "2003-09-05",
+      "official_price": 10266,
+      "official_price_label": "発売時定価（商品情報）",
+      "official_source_url": "https://www.suruga-ya.jp/product/detail/175010046",
+      "condition_scope": "箱と標準付属品がそろった通常中古品",
+      "checked_at": "2026-07-25",
+      "sale": {
+        "median": 33980,
+        "min": 33980,
+        "max": 33980,
+        "observation_count": 1
+      },
+      "value_retention_rate": 331,
+      "saving_vs_official": -23714,
+      "evidence": {
+        "key": "limited",
+        "label": "参考度：低",
+        "note": "1件のみ確認。価格幅は未把握"
+      },
+      "sellers": [
+        {
+          "seller_name": "駿河屋通販",
+          "price": 33980,
+          "condition": "中古通常",
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/product/detail/175010046",
+          "note": "プレミア価格表示の完品相当"
         }
       ]
     }

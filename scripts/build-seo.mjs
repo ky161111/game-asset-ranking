@@ -4,7 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const baseUrl = "https://ky161111.github.io/game-asset-ranking/";
 const managedHead = /(?:\n\s*)?<!-- seo-managed:start -->[\s\S]*?<!-- seo-managed:end -->(?:\n\s*)?/;
-const managedFooter = /(?:\n\s*)?<!-- trust-links:start -->[\s\S]*?<!-- trust-links:end -->(?:\n\s*)?/;
+const managedFooter = /\s*<!-- trust-links:start -->[\s\S]*?<!-- trust-links:end -->\s*/;
 const managedPolicy = /(?:\n\s*)?<!-- data-policy:start -->[\s\S]*?<!-- data-policy:end -->(?:\n\s*)?/;
 const managedMarket = /(?:\n\s*)?<!-- market-insight:start -->[\s\S]*?<!-- market-insight:end -->(?:\n\s*)?/;
 
@@ -79,6 +79,8 @@ function breadcrumbs(relative, html, game) {
     items.push({ name: platformLabel[game.platform], url: new URL(platformPage, baseUrl).href });
   } else if (relative.startsWith("pages/articles/")) {
     items.push({ name: "相場の読み方", url: new URL("pages/articles/value-retention.html", baseUrl).href });
+  } else if (["pages/hardware/new3dsll-metallic-blue.html", "pages/hardware/ps2-90000-charcoal.html", "pages/hardware/gba-sp-pearl-blue.html"].includes(relative)) {
+    items.push({ name: "レトロゲーム本体の中古相場", url: new URL("pages/retro-hardware.html", baseUrl).href });
   } else if (relative.startsWith("pages/hardware/")) {
     items.push({ name: "ゲーム機本体の中古相場", url: new URL("pages/hardware.html", baseUrl).href });
   }
@@ -134,7 +136,7 @@ for (const file of files) {
     html = html.replace(/<\/head>/i, `${block}\n</head>`);
   }
 
-  const trustLinks = `\n  <!-- trust-links:start -->\n  <p class="trust-links"><a href="${prefix}pages/methodology.html">価格の調べ方</a> · <a href="${prefix}pages/about.html">このサイトについて</a> · <a href="${prefix}pages/disclaimer.html">免責・広告表記</a></p>\n  <!-- trust-links:end -->`;
+  const trustLinks = `  <!-- trust-links:start -->\n  <p class="trust-links"><a href="${prefix}pages/methodology.html">価格の調べ方</a> · <a href="${prefix}pages/about.html">このサイトについて</a> · <a href="${prefix}pages/disclaimer.html">免責・広告表記</a></p>\n  <!-- trust-links:end -->`;
   html = html.replace(/<\/footer>/i, `${trustLinks}\n</footer>`);
 
   if (marketGameIds.has(id)) {
