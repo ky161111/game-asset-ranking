@@ -5,6 +5,30 @@
     return `${year}年${Number(month)}月${Number(day)}日`;
   };
   const depth = location.pathname.includes("/pages/hardware/") ? "../../" : "../";
+  const evidenceClass = (item) => item.evidence.key === "limited" ? "limited" : "";
+  const renderTable = (items, table, query = "", sort = "retention-desc") => {
+    const normalized = query.trim().toLocaleLowerCase("ja-JP");
+    const filtered = items.filter((item) => {
+      const aliases = { "PlayStation 2": "PS2", "PlayStation 5": "PS5", "Nintendo Switch 2": "Switch2" };
+      const searchText = [item.title, item.model_number, item.platform, aliases[item.platform] || ""].join(" ").toLocaleLowerCase("ja-JP");
+      return !normalized || searchText.includes(normalized);
+    });
+    const sorted = [...filtered].sort((a, b) => {
+      if (sort === "price-asc") return a.sale.median - b.sale.median;
+      if (sort === "price-desc") return b.sale.median - a.sale.median;
+      if (sort === "era") return a.era.localeCompare(b.era) || b.value_retention_rate - a.value_retention_rate;
+      return b.value_retention_rate - a.value_retention_rate;
+    });
+    table.innerHTML = sorted.length ? sorted.map((item) =>
+      '<tr><td><strong>' + item.title + '</strong><small>' + item.platform + '｜' + item.model_number + '</small></td>' +
+      '<td><strong>' + money(item.sale.median) + '</strong><small>' + (item.sale.min === item.sale.max ? "単一確認" : money(item.sale.min) + "〜" + money(item.sale.max)) + '</small></td>' +
+      '<td><strong>' + item.value_retention_rate + '%</strong><small>' + (item.saving_vs_official >= 0 ? "定価より安い" : "発売時価格超え") + '</small></td>' +
+      '<td><span class="evidence ' + evidenceClass(item) + '">' + item.evidence.label + '</span><small>' + item.sale.observation_count + '件</small></td>' +
+      '<td><a class="table-link" href="' + detailHref(item) + '">詳細</a></td></tr>'
+    ).join("") : '<tr><td colspan="5" class="empty-state">条件に一致する本体がありません。</td></tr>';
+    const count = document.querySelector("[data-hardware-count]");
+    if (count) count.textContent = sorted.length + "機種を表示";
+  };
   const detailHref = (item) => location.pathname.includes("/pages/hardware/")
     ? `${item.slug}.html`
     : `hardware/${item.slug}.html`;
@@ -32,6 +56,18 @@
             <p class="note">${date(item.checked_at)}確認・${item.sale.observation_count}件。${item.evidence.note}</p>
             <p class="actions"><a class="button" href="${detailHref(item)}">型番別の価格を見る</a></p>
           </article>`).join("");
+      }
+
+      const table = document.querySelector("[data-hardware-table]");
+      if (table) {
+        const era = table.dataset.era;
+        const tableItems = era ? items.filter((item) => item.era === era) : items;
+        const search = document.querySelector("[data-hardware-search]");
+        const sort = document.querySelector("[data-hardware-sort]");
+        const refresh = () => renderTable(tableItems, table, search?.value || "", sort?.value || "retention-desc");
+        search?.addEventListener("input", refresh);
+        sort?.addEventListener("change", refresh);
+        refresh();
       }
 
       const host = document.querySelector("[data-hardware-id]");
