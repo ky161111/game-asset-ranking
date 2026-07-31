@@ -88,7 +88,8 @@
     });
   };
 
-  const rankCard = (list, label, formatter) => '<div class="card"><h3>' + label + "</h3><ol>" + list.slice(0, 3).map((item) => '<li><a href="pages/price-history.html#' + escape(item.game_id) + '">' + escape(item.title) + "</a><br><strong>" + formatter(item) + "</strong></li>").join("") + "</ol></div>";
+  const historyHref = location.pathname.includes("/pages/") ? "price-history.html#" : "pages/price-history.html#";
+  const rankCard = (list, label, formatter) => '<div class="card"><h3>' + label + "</h3><ol>" + list.slice(0, 3).map((item) => '<li><a href="' + historyHref + escape(item.game_id) + '">' + escape(item.title) + "</a><br><strong>" + formatter(item) + "</strong></li>").join("") + "</ol></div>";
 
   const renderMonthly = (items) => {
     const host = document.getElementById("monthly-ranking");

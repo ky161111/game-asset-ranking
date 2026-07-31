@@ -47,7 +47,7 @@ const sitemap = await readFile(path.join(root, "sitemap.xml"), "utf8");
 for (const forbidden of ["pages/games/ps4-", "pages/games/ps5-", "pages/ps4.html", "pages/ps5.html", "pages/switch.html"]) {
   if (sitemap.includes(forbidden)) errors.push(`sitemap.xml: contains excluded URL ${forbidden}`);
 }
-for (const required of ["pages/methodology.html", "pages/about.html", "pages/market-watch.html", "pages/hardware.html", "pages/hardware-compare.html", "pages/retro-hardware.html", "pages/hardware/switch2-japanese.html", "pages/hardware/switch-oled-white.html", "pages/hardware/ps5-slim-disc.html", "pages/hardware/new3dsll-metallic-blue.html", "pages/hardware/ps2-90000-charcoal.html", "pages/hardware/gba-sp-pearl-blue.html", "pages/games/game-001.html"]) {
+for (const required of ["pages/methodology.html", "pages/about.html", "pages/market-watch.html", "pages/price-movement.html", "pages/hardware.html", "pages/hardware-compare.html", "pages/retro-hardware.html", "pages/hardware/switch2-japanese.html", "pages/hardware/switch-oled-white.html", "pages/hardware/ps5-slim-disc.html", "pages/hardware/new3dsll-metallic-blue.html", "pages/hardware/ps2-90000-charcoal.html", "pages/hardware/gba-sp-pearl-blue.html", "pages/games/game-001.html"]) {
   if (!sitemap.includes(required)) errors.push(`sitemap.xml: missing ${required}`);
 }
 
