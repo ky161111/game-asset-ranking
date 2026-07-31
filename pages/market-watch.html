@@ -1,7 +1,23 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <!-- analytics-guard:start -->
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var key = "gameAssetAnalyticsOptOut";
+        if (params.get("analytics") === "off") localStorage.setItem(key, "1");
+        if (params.get("analytics") === "on") localStorage.removeItem(key);
+        if (localStorage.getItem(key) === "1") {
+          window["ga-disable-G-YEM0Q8ZTXC"] = true;
+          window.__gameAssetAnalyticsOptOut = true;
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <!-- analytics-guard:end -->
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Switch中古ソフト 今月の価格差・買い時候補 | ゲーム売買相場ナビ</title>
   <meta name="description" content="人気Nintendo Switchソフト10本について、中古通常版を3店舗ずつ確認した価格の中央値・範囲・前回記録との差を掲載します。">
@@ -21,6 +37,7 @@
 
   <!-- seo-managed:start -->
   <link rel="canonical" href="https://ky161111.github.io/game-asset-ranking/pages/market-watch.html">
+  <script defer src="../assets/analytics.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",

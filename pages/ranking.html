@@ -1,7 +1,23 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <!-- analytics-guard:start -->
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var key = "gameAssetAnalyticsOptOut";
+        if (params.get("analytics") === "off") localStorage.setItem(key, "1");
+        if (params.get("analytics") === "on") localStorage.removeItem(key);
+        if (localStorage.getItem(key) === "1") {
+          window["ga-disable-G-YEM0Q8ZTXC"] = true;
+          window.__gameAssetAnalyticsOptOut = true;
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <!-- analytics-guard:end -->
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Switchソフト資産価値ランキング | ゲーム売買相場ナビ</title>
 
@@ -87,6 +103,7 @@
   <!-- seo-managed:start -->
   <meta name="description" content="Switchソフト資産価値ランキングについて、ゲームの中古販売価格・買取価格・価格推移を確認できるゲーム売買相場ナビのページです。">
   <link rel="canonical" href="https://ky161111.github.io/game-asset-ranking/pages/ranking.html">
+  <script defer src="../assets/analytics.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",

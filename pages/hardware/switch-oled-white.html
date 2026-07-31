@@ -1,7 +1,23 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <!-- analytics-guard:start -->
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var key = "gameAssetAnalyticsOptOut";
+        if (params.get("analytics") === "off") localStorage.setItem(key, "1");
+        if (params.get("analytics") === "on") localStorage.removeItem(key);
+        if (localStorage.getItem(key) === "1") {
+          window["ga-disable-G-YEM0Q8ZTXC"] = true;
+          window.__gameAssetAnalyticsOptOut = true;
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <!-- analytics-guard:end -->
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Switch 有機ELモデル ホワイトの中古価格と定価 | HEG-S-KAAAA</title>
   <meta name="description" content="Nintendo Switch有機ELモデル ホワイト（HEG-S-KAAAA）の中古価格、公式価格との差、確認元を掲載。付属品完備の通常中古品だけを対象にします。">
@@ -12,6 +28,7 @@
 
   <!-- seo-managed:start -->
   <link rel="canonical" href="https://ky161111.github.io/game-asset-ranking/pages/hardware/switch-oled-white.html">
+  <script defer src="../../assets/analytics.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",

@@ -27,6 +27,7 @@ for (const file of await htmlFiles(root)) {
   if (/pages[\\/]games[\\/](ps4|ps5)-\d+\.html$/.test(relative) && !noindex) errors.push(`${relative}: pending page must be noindex`);
   if (/pages[\\/](ps4|ps5)\.html$/.test(relative) && !noindex) errors.push(`${relative}: pending platform page must be noindex`);
   if (/pages[\\/]games[\\/]game-\d+\.html$/.test(relative) && noindex) errors.push(`${relative}: tracking page must be indexable`);
+  if (!redirect && !/assets[\\/]analytics\.js/.test(html)) errors.push(`${relative}: analytics event script missing`);
   if (/pages[\\/]games[\\/]game-00[1-9]\.html$|pages[\\/]games[\\/]game-010\.html$/.test(relative)) {
     if (!/data-market-insight-game=/.test(html)) errors.push(`${relative}: market insight host missing`);
     if (!/market-insights\.js/.test(html) || !/market-insights\.css/.test(html)) errors.push(`${relative}: market insight assets missing`);
@@ -60,6 +61,21 @@ for (const item of marketSummary.items) {
   if (!item.sale.min || !item.sale.max || !item.sale.median) errors.push(`market-summary.json: ${item.game_id} has invalid prices`);
   if (new Set(item.sellers.map((seller) => seller.seller_name)).size !== 3) errors.push(`market-summary.json: ${item.game_id} must have 3 distinct sellers`);
   if (item.sellers.some((seller) => !seller.source_url.startsWith("https://"))) errors.push(`market-summary.json: ${item.game_id} has invalid source URL`);
+}
+
+const priceTrends = JSON.parse(await readFile(path.join(root, "data/price-trends.json"), "utf8"));
+if (priceTrends.items.length !== 30) errors.push(`price-trends.json: expected 30 games, got ${priceTrends.items.length}`);
+for (const item of priceTrends.items) {
+  if (!item.points.length) errors.push(`price-trends.json: ${item.game_id} has no points`);
+  if (!item.latest || !item.latest.used_sale_price) errors.push(`price-trends.json: ${item.game_id} has no latest sale price`);
+  if (item.sale_point_count < 1) errors.push(`price-trends.json: ${item.game_id} has no sale points`);
+  if (item.points.some((point) => !point.period || !point.observed_at || !point.source_url.startsWith("https://"))) {
+    errors.push(`price-trends.json: ${item.game_id} has an invalid point`);
+  }
+}
+const currentTrendIds = new Set(marketSummary.items.map((item) => item.game_id));
+for (const item of priceTrends.items) {
+  if (currentTrendIds.has(item.game_id) && item.sale_point_count < 2) errors.push(`price-trends.json: ${item.game_id} must merge the current snapshot`);
 }
 
 const hardwareSummary = JSON.parse(await readFile(path.join(root, "data/hardware-summary.json"), "utf8"));

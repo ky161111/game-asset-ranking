@@ -7,6 +7,7 @@ const managedHead = /(?:\n\s*)?<!-- seo-managed:start -->[\s\S]*?<!-- seo-manage
 const managedFooter = /\s*<!-- trust-links:start -->[\s\S]*?<!-- trust-links:end -->\s*/;
 const managedPolicy = /(?:\n\s*)?<!-- data-policy:start -->[\s\S]*?<!-- data-policy:end -->(?:\n\s*)?/;
 const managedMarket = /(?:\n\s*)?<!-- market-insight:start -->[\s\S]*?<!-- market-insight:end -->(?:\n\s*)?/;
+const managedAnalyticsGuard = /(?:\n\s*)?<!-- analytics-guard:start -->[\s\S]*?<!-- analytics-guard:end -->(?:\n\s*)?/;
 
 const csvRows = (text) => {
   const [header, ...rows] = text.trim().split(/\r?\n/);
@@ -106,7 +107,26 @@ const sitemapUrls = [];
 for (const file of files) {
   const relative = path.relative(root, file).split(path.sep).join("/");
   let html = await readFile(file, "utf8");
-  html = html.replace(managedHead, "\n").replace(managedFooter, "\n").replace(managedPolicy, "\n").replace(managedMarket, "\n");
+  html = html.replace(managedHead, "\n").replace(managedFooter, "\n").replace(managedPolicy, "\n").replace(managedMarket, "\n").replace(managedAnalyticsGuard, "\n");
+
+  const analyticsGuard = `
+  <!-- analytics-guard:start -->
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var key = "gameAssetAnalyticsOptOut";
+        if (params.get("analytics") === "off") localStorage.setItem(key, "1");
+        if (params.get("analytics") === "on") localStorage.removeItem(key);
+        if (localStorage.getItem(key) === "1") {
+          window["ga-disable-G-YEM0Q8ZTXC"] = true;
+          window.__gameAssetAnalyticsOptOut = true;
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <!-- analytics-guard:end -->`;
+  html = html.replace(/<head>/i, `<head>${analyticsGuard}`);
 
   const id = path.basename(file, ".html");
   const game = games.get(id);
@@ -128,6 +148,7 @@ for (const file of files) {
     headParts.push(`<link rel="stylesheet" href="${prefix}assets/market-insights.css">`);
     headParts.push(`<script defer src="${prefix}assets/market-insights.js"></script>`);
   }
+  if (!redirect) headParts.push(`<script defer src="${prefix}assets/analytics.js"></script>`);
   if (relative !== "index.html" && !redirect) {
     headParts.push(`<script type="application/ld+json">\n${breadcrumbJson(breadcrumbs(relative, html, game))}\n</script>`);
   }
@@ -147,7 +168,8 @@ for (const file of files) {
   if (game?.status === "tracking") {
     const latest = latestByGame.get(game.game_id);
     const marketRows = observationsByGame[game.game_id] || [];
-    const checkedLabel = marketRows.length ? japaneseDate(marketRows[0].observed_at) : latest?.month ? latest.month.replace("-", "年") + "月" : "記録開始月";
+    const latestMarketRow = marketRows.sort((a, b) => a.observed_at.localeCompare(b.observed_at)).at(-1);
+    const checkedLabel = latestMarketRow ? japaneseDate(latestMarketRow.observed_at) : latest?.month ? latest.month.replace("-", "年") + "月" : "記録開始月";
     const sourceLabel = marketRows.length ? `${marketRows.length}店舗の中古通常版` : `${latest?.source_name || "公開価格情報"}の単一価格`;
     const policy = `\n  <!-- data-policy:start -->\n  <section class="panel data-policy" aria-labelledby="data-policy-title"><h2 id="data-policy-title">この価格データについて</h2><p>${checkedLabel}に確認した${sourceLabel}を記録しています。商品の状態、送料、店舗、在庫により実際の価格は変わります。</p><p><a class="text-link" href="${prefix}pages/methodology.html">価格の調査条件と更新方法を見る</a></p></section>\n  <!-- data-policy:end -->`;
     html = html.replace(/<\/main>/i, `${policy}\n</main>`);

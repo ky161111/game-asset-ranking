@@ -1,7 +1,23 @@
 <!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
+  <!-- analytics-guard:start -->
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(location.search);
+        var key = "gameAssetAnalyticsOptOut";
+        if (params.get("analytics") === "off") localStorage.setItem(key, "1");
+        if (params.get("analytics") === "on") localStorage.removeItem(key);
+        if (localStorage.getItem(key) === "1") {
+          window["ga-disable-G-YEM0Q8ZTXC"] = true;
+          window.__gameAssetAnalyticsOptOut = true;
+        }
+      } catch (error) {}
+    }());
+  </script>
+  <!-- analytics-guard:end -->
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>あつまれ どうぶつの森の中古価格・買い時・売り時 | ゲーム売買相場ナビ</title>
 
@@ -90,6 +106,7 @@
   <link rel="canonical" href="https://ky161111.github.io/game-asset-ranking/pages/games/game-009.html">
   <link rel="stylesheet" href="../../assets/market-insights.css">
   <script defer src="../../assets/market-insights.js"></script>
+  <script defer src="../../assets/analytics.js"></script>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",

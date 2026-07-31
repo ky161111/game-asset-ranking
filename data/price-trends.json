@@ -1,0 +1,1110 @@
+{
+  "generated_from": [
+    "data/price-history.csv",
+    "data/price-observations.csv"
+  ],
+  "methodology": "monthly history plus the latest same-condition multi-store sale snapshot when available",
+  "latest_market_observation": "2026-07-24",
+  "items": [
+    {
+      "game_id": "game-001",
+      "title": "ゼルダの伝説 ブレス オブ ザ ワイルド",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4730,
+          "buyback_price": 3700,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 4610,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000001",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 4610,
+        "buyback_price": 3700,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000001",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -120,
+      "sale_change_rate": -2.5,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-002",
+      "title": "ゼルダの伝説 ティアーズ オブ ザ キングダム",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 7080,
+          "buyback_price": 2700,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 4620,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002738",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 4620,
+        "buyback_price": 2700,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109002738",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -2460,
+      "sale_change_rate": -34.7,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-003",
+      "title": "マリオカート8 デラックス",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3590,
+          "buyback_price": 3000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 3650,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000004",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 3650,
+        "buyback_price": 3000,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000004",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": 60,
+      "sale_change_rate": 1.7,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-004",
+      "title": "大乱闘スマッシュブラザーズ SPECIAL",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 5798,
+          "buyback_price": 4000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 5120,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000290",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 5120,
+        "buyback_price": 4000,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000290",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -678,
+      "sale_change_rate": -11.7,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-005",
+      "title": "スーパーマリオ オデッセイ",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4560,
+          "buyback_price": 3000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 4300,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000073",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 4300,
+        "buyback_price": 3000,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000073",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -260,
+      "sale_change_rate": -5.7,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-006",
+      "title": "スーパーマリオ 3Dコレクション",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 7390,
+          "buyback_price": 5000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 6180,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001188",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 6180,
+        "buyback_price": 5000,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109001188",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -1210,
+      "sale_change_rate": -16.4,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-007",
+      "title": "New スーパーマリオブラザーズ U デラックス",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4370,
+          "buyback_price": 3000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 3930,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000325",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 3930,
+        "buyback_price": 3000,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000325",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -440,
+      "sale_change_rate": -10.1,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-008",
+      "title": "スーパーマリオ 3Dワールド + フューリーワールド",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4740,
+          "buyback_price": 2300,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 3660,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109001187",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 3660,
+        "buyback_price": 2300,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109001187",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -1080,
+      "sale_change_rate": -22.8,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-009",
+      "title": "あつまれ どうぶつの森",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4450,
+          "buyback_price": 3800,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 3700,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109000913",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 3700,
+        "buyback_price": 3800,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109000913",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -750,
+      "sale_change_rate": -16.9,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-010",
+      "title": "スプラトゥーン3",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4900,
+          "buyback_price": 2800,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        },
+        {
+          "period": "2026-07-24",
+          "label": "2026年7月24日",
+          "observed_at": "2026-07-24",
+          "used_sale_price": 4500,
+          "buyback_price": null,
+          "source_name": "3店舗の確認中央値",
+          "source_url": "https://www.suruga-ya.jp/product/other/109002171",
+          "note": "同じ版・状態の中古販売価格を複数店舗で確認した中央値",
+          "source_type": "multi_store"
+        }
+      ],
+      "latest": {
+        "period": "2026-07-24",
+        "label": "2026年7月24日",
+        "used_sale_price": 4500,
+        "buyback_price": 2800,
+        "buyback_period": "2026-06",
+        "source_name": "3店舗の確認中央値",
+        "source_url": "https://www.suruga-ya.jp/product/other/109002171",
+        "source_type": "multi_store"
+      },
+      "sale_point_count": 2,
+      "buyback_point_count": 1,
+      "sale_change": -400,
+      "sale_change_rate": -8.2,
+      "data_status": "current_snapshot"
+    },
+    {
+      "game_id": "game-011",
+      "title": "スプラトゥーン2",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 730,
+          "buyback_price": 350,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 730,
+        "buyback_price": 350,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-012",
+      "title": "ポケットモンスター ソード",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3200,
+          "buyback_price": 2200,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3200,
+        "buyback_price": 2200,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-013",
+      "title": "ポケットモンスター シールド",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3000,
+          "buyback_price": 1800,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3000,
+        "buyback_price": 1800,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-014",
+      "title": "ポケットモンスター ブリリアントダイヤモンド",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 2280,
+          "buyback_price": 1000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 2280,
+        "buyback_price": 1000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-015",
+      "title": "ポケットモンスター シャイニングパール",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 2898,
+          "buyback_price": 1000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 2898,
+        "buyback_price": 1000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-016",
+      "title": "ポケットモンスター スカーレット",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3300,
+          "buyback_price": 2000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3300,
+        "buyback_price": 2000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-017",
+      "title": "ポケットモンスター バイオレット",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 2960,
+          "buyback_price": 1400,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 2960,
+        "buyback_price": 1400,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-018",
+      "title": "Pokemon LEGENDS アルセウス",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3380,
+          "buyback_price": 1700,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3380,
+        "buyback_price": 1700,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-019",
+      "title": "Xenoblade Definitive Edition",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 5300,
+          "buyback_price": 2800,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 5300,
+        "buyback_price": 2800,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-020",
+      "title": "Xenoblade2",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 6700,
+          "buyback_price": 3000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 6700,
+        "buyback_price": 3000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-021",
+      "title": "Xenoblade3",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3798,
+          "buyback_price": 2000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3798,
+        "buyback_price": 2000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-022",
+      "title": "Fire Emblem 風花雪月",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3980,
+          "buyback_price": 3700,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3980,
+        "buyback_price": 3700,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-023",
+      "title": "Fire Emblem Engage",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 5300,
+          "buyback_price": 2500,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 5300,
+        "buyback_price": 2500,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-024",
+      "title": "ドラゴンクエストビルダーズ2",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3300,
+          "buyback_price": 2200,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3300,
+        "buyback_price": 2200,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-025",
+      "title": "ドラゴンクエストモンスターズ3 魔族の王子とエルフの旅",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3270,
+          "buyback_price": 1000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3270,
+        "buyback_price": 1000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-026",
+      "title": "オクトパストラベラー",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3140,
+          "buyback_price": 2200,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3140,
+        "buyback_price": 2200,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-027",
+      "title": "オクトパストラベラーII",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 4400,
+          "buyback_price": 3500,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 4400,
+        "buyback_price": 3500,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-028",
+      "title": "メトロイド ドレッド",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 5770,
+          "buyback_price": 2000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 5770,
+        "buyback_price": 2000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-029",
+      "title": "桃太郎電鉄 昭和 平成 令和も定番！",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 2850,
+          "buyback_price": 3200,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 2850,
+        "buyback_price": 3200,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    },
+    {
+      "game_id": "game-030",
+      "title": "桃太郎電鉄ワールド 地球は希望でまわってる！",
+      "platform": "switch",
+      "points": [
+        {
+          "period": "2026-06",
+          "label": "2026年06月",
+          "observed_at": "2026-06-01",
+          "used_sale_price": 3980,
+          "buyback_price": 3000,
+          "source_name": "駿河屋",
+          "source_url": "https://www.suruga-ya.jp/",
+          "note": "基準月",
+          "source_type": "monthly"
+        }
+      ],
+      "latest": {
+        "period": "2026-06",
+        "label": "2026年06月",
+        "used_sale_price": 3980,
+        "buyback_price": 3000,
+        "buyback_period": "2026-06",
+        "source_name": "駿河屋",
+        "source_url": "https://www.suruga-ya.jp/",
+        "source_type": "monthly"
+      },
+      "sale_point_count": 1,
+      "buyback_point_count": 1,
+      "sale_change": null,
+      "sale_change_rate": null,
+      "data_status": "history_only"
+    }
+  ]
+}

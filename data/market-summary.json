@@ -1,6 +1,7 @@
 {
   "generated_from": "data/price-observations.csv",
   "methodology": "same-condition seller observations; median of selected listings",
+  "latest_market_observation": "2026-07-24",
   "items": [
     {
       "game_id": "game-001",
@@ -29,6 +30,11 @@
         "key": "hold",
         "label": "価格維持型",
         "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
       },
       "sellers": [
         {
@@ -79,6 +85,11 @@
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
       },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
+      },
       "sellers": [
         {
           "seller_name": "駿河屋近見店",
@@ -127,6 +138,11 @@
         "key": "hold",
         "label": "価格維持型",
         "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
       },
       "sellers": [
         {
@@ -177,6 +193,11 @@
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
       },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
+      },
       "sellers": [
         {
           "seller_name": "駿河屋盛岡MOSSビル店",
@@ -225,6 +246,11 @@
         "key": "hold",
         "label": "価格維持型",
         "reason": "前回確認の買取価格が現在の確認中央値の70%以上です。"
+      },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
       },
       "sellers": [
         {
@@ -275,6 +301,11 @@
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
       },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
+      },
       "sellers": [
         {
           "seller_name": "駿河屋高松瓦町FLAG店",
@@ -323,6 +354,11 @@
         "key": "buy",
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
+      },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
       },
       "sellers": [
         {
@@ -373,6 +409,11 @@
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
       },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
+      },
       "sellers": [
         {
           "seller_name": "駿河屋松山大街道店",
@@ -422,6 +463,11 @@
         "label": "買い時候補",
         "reason": "前回の単一価格より確認中央値が10%以上低い状態です。"
       },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
+      },
       "sellers": [
         {
           "seller_name": "駿河屋GIGA福岡春日店",
@@ -470,6 +516,11 @@
         "key": "watch",
         "label": "様子見",
         "reason": "同じ調査方法の価格履歴を蓄積中です。"
+      },
+      "data_quality": {
+        "distinct_sellers": 3,
+        "same_condition": true,
+        "current_snapshot": true
       },
       "sellers": [
         {
