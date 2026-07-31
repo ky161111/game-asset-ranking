@@ -121,6 +121,8 @@ for (const file of files) {
         if (localStorage.getItem(key) === "1") {
           window["ga-disable-G-YEM0Q8ZTXC"] = true;
           window.__gameAssetAnalyticsOptOut = true;
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push = function () {};
         }
       } catch (error) {}
     }());
